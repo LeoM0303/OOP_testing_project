@@ -1,26 +1,28 @@
+##for market create OOP style
+
+
 def main() -> None:
     dataset = get_information()
-    product, location = dataset
+    name_product, location = dataset
 
-    if not product or not location:
-        print("No information found")
-        return
+    if not name_product or not location:
+        print("Invalid input")
 
-    print(f"Products {product} are located at {location.capitalize()}")
+    print(f"Product: {name_product.capitalize()}, Location: {location.capitalize()}")
 
 def get_information() -> tuple[str, str]:
     while True:
-        product = input("Enter product name: ")
-        if not product:
-            print("Product name cannot be empty")
+        name_product = input("Enter name of product: ")
+        if not name_product:
+            print("Invalid input")
             continue
 
-        location = input("Enter product location: ")
+        location = input("Enter location: ")
         if not location:
-            print("Product location cannot be empty")
+            print("Invalid input")
             continue
 
-        return product, location
+        return name_product, location
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     main()

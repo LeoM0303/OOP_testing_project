@@ -2,9 +2,9 @@ class Point:
     color = 'red'
     circle = 2
 
-    def __init__(self, a, b):
-       self.x = a
-       self.y = b
+    def __init__(self, x, y):
+       self.x = x
+       self.y = y
 
     def set_coords(self, x,y):
         self.x = x

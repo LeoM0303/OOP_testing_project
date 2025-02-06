@@ -6,11 +6,15 @@ class Point:
         self.x = x
         self.y = y
 
+    def get_coords(self):
+        return self.x, self.y
 
 pt = Point()
 pt.set_coords(1,2)
-print(pt.__dict__)
+f = getattr(pt, 'get_coords')
+print(f)
 
 pt2 = Point()
 pt2.set_coords(10,20)
-print(pt2.__dict__)
+f = getattr(pt2, 'get_coords')
+print(f)

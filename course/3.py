@@ -10,7 +10,7 @@ class DataBase:
         if not hasattr(self, 'users'):
             self.users = input("Enter users: ")
             self.password = input("Enter password: ")
-            self.port = input("Enter port: ")
+            self.port = port if port else input("Enter port: ")
 
     def connect(self):
         print(f'Connect to database: users={self.users.capitalize()}, password={self.password}, port={self.port}')
@@ -24,10 +24,8 @@ class DataBase:
     def write(self):
         print(f'Write data')
 
-db = DataBase()
-db2 = DataBase()
+db = DataBase('', '', 10)
 
 db.connect()
-db2.connect()
 
-print(id(db), id(db2))
+print('User id: ', id(db))

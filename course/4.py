@@ -12,8 +12,11 @@ class Vector:
             self.x = x
             self.y = y
 
+        print('Square + sum, Vector after check: ', self.norm2(self.x, self.y))
+
     def get_coords(self):
         return self.x, self.y
+
 
     @staticmethod
     def norm2(x, y):

@@ -16,3 +16,5 @@ class Vector:
 v = Vector(1,2)
 print(v.get_coords())
 
+print(Vector.get_valid_coards(1))
+print(Vector.get_valid_coards(101))

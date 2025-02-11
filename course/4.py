@@ -15,5 +15,10 @@ class Vector:
     def get_coords(self):
         return self.x, self.y
 
-v = Vector(1,2)
-print(v.get_coords())
+    @staticmethod
+    def norm2(x, y):
+        return x ** 2 + y ** 2
+
+v = Vector(1,300)
+print('Your vectors coardinate: ', v.get_coords())
+print('Square + sum : ', Vector.norm2(1,300))

@@ -4,8 +4,11 @@ class Point:
         self.__x = y
 
     def set_coords(self, x,y):
-        self.__x = x
-        self.__y = y
+        if type(x) in (int, float) and type(y) in (int, float):
+            self.__x = x
+            self.__y = y
+        else:
+            raise ValueError
 
     def get_coords(self):
         return self.__x, self.__y

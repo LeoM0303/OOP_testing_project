@@ -1,6 +1,6 @@
 #install - pip install accessify
 
-from accessify import protected, protected
+from accessify import private, protected
 
 class Point:
     def __init__(self, x=0, y=0):
@@ -9,6 +9,7 @@ class Point:
             self.__x = x
             self.__x = y
 
+    @private
     @classmethod
     def __check_coards(cls, x):
         return type(x) in (int, float)

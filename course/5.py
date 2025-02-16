@@ -1,3 +1,7 @@
+#install - pip install accessify
+
+
+
 class Point:
     def __init__(self, x=0, y=0):
         self.__x = self.__y = 0
@@ -21,4 +25,4 @@ class Point:
 
 pt = Point(1,2)
 pt.set_coords(3,4)
-print(pt.get_coords())
+print(dir(pt))

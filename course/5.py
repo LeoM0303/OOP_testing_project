@@ -1,7 +1,9 @@
 class Point:
     def __init__(self, x=0, y=0):
-        self.__x = x
-        self.__x = y
+        if self.__check_coards(x) and self.__check_coards(y):
+            self.__x = self.__y = 0
+            self.__x = x
+            self.__x = y
 
     @classmethod
     def __check_coards(cls, x):

@@ -4,8 +4,8 @@ class Point:
         self.__x = y
 
     @classmethod
-    def __check_coards(cls, x, y):
-        return type(x) in (int, float) and type(y) in (int, float)
+    def __check_coards(cls, x):
+        return type(x) in (int, float)
 
     def set_coords(self, x,y):
         if self.__check_coards(x) and self.__check_coards(y):

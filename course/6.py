@@ -16,9 +16,6 @@ class Point:
         print('Get attribute: ')
         return object.__getattribute__(self, item)
 
-pt1 = Point(1,3)
-
-pt1.set_bound(-100)
-
-print(pt1.__dict__)
-print(Point.__dict__)
+pt1 = Point(1,2)
+pt2 = Point(1000,2000)
+a = pt1.x

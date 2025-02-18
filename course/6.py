@@ -12,10 +12,9 @@ class Point:
             self.x = x
             self.y = y
 
-    @classmethod
-    def set_bound(cls, left):
-        cls.MIN_COORDS = left
-
+    def __gettributte__(self, item):
+        print('Get attribute: ')
+        return object.__getattribute__(self, item)
 
 pt1 = Point(1,3)
 

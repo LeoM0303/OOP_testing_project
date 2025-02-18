@@ -18,4 +18,6 @@ class Point:
 
 pt1 = Point(1,2)
 pt2 = Point(1000,2000)
+
 a = pt1.x
+print(a)

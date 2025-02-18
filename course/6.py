@@ -13,8 +13,10 @@ class Point:
             self.y = y
 
     def __gettributte__(self, item):
-        print('Get attribute: ')
-        return object.__getattribute__(self, item)
+        if item == 'x':
+           raise ValueError("Доступ заборонений")
+        else:
+            return object.__getattribute__(self, item)
 
 pt1 = Point(1,2)
 pt2 = Point(1000,2000)
